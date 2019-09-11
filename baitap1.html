@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> hello</title>
+</head>
+<body>
+    <h1> hello dong </h1>
+    <script>
+       
+        function kiemTra(n)
+        {
+            let flag = true ;
+            if( n < 2 ){
+                flag = false;
+            }
+            else{
+                for( let i = 2 ; i < n-1 ; i++ ){
+                    if( n % i === 0 ){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if( flag === true ){
+                console.log( `So ${n} la so nguyen to` );
+            }else{
+                console.log( `So ${n} khong phai la so nguyen to` );
+            }
+        }
+        kiemTra( prompt( " Nhap vao so nguyen n: " ));
+    </script>
+</body>
+</html>
