@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> Array</title>
+</head>
+<body>
+    <h1> hello dong </h1>
+    <script>
+        let myStudents = [] ;
+        while (true) {
+            let operation = prompt("Ban vui long chon (C ,R ,U , D ,Exit) :");
+            if(operation==="C"){
+                let newStudent =prompt("Ban vui long nhap hoc sinh moi :");
+                myStudents.push(newStudent);
+            }else if(operation==="R"){
+                let printStudent=Number(prompt("Ban vui long nhap so thu tu sinh vien can in :"));
+                console.log(myStudents[printStudent-1]);
+            }else if(operation==="U"){
+                let studenOrderNumber=Number(prompt("Ban vui long nhap them so thu tu cua sinh vien :"));
+                let newStudent=prompt("Ban vui long nhap ten moi cua sinh vien");
+                myStudents[studenOrderNumber-1]=newStudent;
+            }else if(operation==="D"){
+                let deleteOfNumber=Number(prompt("Ban vui long nhap so thu tu sinh vien can xoa :"));
+                myStudents.splice(deleteOfNumber-1,1);
+            }else if(operation==="Exit"){
+                break;
+            }else{
+                console.log("Ban nhap sai roi vui long nhap lai!");
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
