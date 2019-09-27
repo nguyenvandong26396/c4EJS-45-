@@ -8,20 +8,23 @@
     <h1> hello dong </h1>
     <script>
           let myStudents = [] ;
-          let newStudent={};
         while (true) {
             let operation = prompt("Ban vui long chon (C ,R ,U , D ,Exit) :");
-            if(operation==="C"){
-                newStudent.name=prompt("Ban vui long nhap ten sinh vien moi :");
-                newStudent.mssv=prompt("Ban vui long nhap ma so sinh vien :");
-                newStudent.lop=prompt("Ban vui long nhap lop sinh vien :");
-                newStudent.school=prompt("Ban vui long nhap truong hoc :");
-                newStudent.email=prompt("Ban vui long nhap email:");
-                myStudents.push(newStudent);
-            }else if(operation==="R"){
-                let indexStudent=Number(prompt("Ban vui long nhap so thu tu sinh vien can in :"));
-                console.log(myStudents[indexStudent-1]);
-            }else if(operation==="U"){
+            if( operation === "C" ){
+                let numberStudent=Number(prompt("ban vui long nhap so luong sinh vien:"));
+                for(let i =0;i<numberStudent;i++){
+                    let newStudent={};
+                    newStudent.name=prompt("Ban vui long nhap ten sinh vien :");
+                    newStudent.mssv=prompt("Ban vui long nhap ma so sinh vien :");
+                    newStudent.lop=prompt("Ban vui long nhap lop sinh vien :");
+                    newStudent.truong=prompt("Ban vui long nhap truong sinh vien :");
+                    newStudent.email=prompt("Ban vui long nhap email sinh vien :");
+                    myStudents.push(newStudent);
+                }
+            }else if( operation === "R" ){
+                let indexStudent =Number(prompt("Ban vui long nhap so thu tu sinh vien can in :"));
+                console.log( myStudents[ indexStudent - 1 ]);
+            }else if( operation === "U" ){
                 let numberOfStudent=Number(prompt("Ban vui long nhap them so thu tu cua sinh vien :"));
                 let updateStudent={};
                 updateStudent.name=prompt("Ban vui long nhap ten sinh vien moi :");
@@ -30,10 +33,10 @@
                 updateStudent.school=prompt("Ban vui long nhap truong hoc :");
                 updateStudent.email=prompt("Ban vui long nhap email:");
                 myStudents[numberOfStudent-1]= updateStudent;
-            }else if(operation==="D"){
+            }else if( operation === "D" ){
                 let deleteOfNumber=Number(prompt("Ban vui long nhap so thu tu sinh vien can xoa :"));
                 myStudents.splice(deleteOfNumber-1,1);
-            }else if(operation==="Exit"){
+            }else if( operation === "Exit" ){
                 break;
             }else{
                 console.log("Ban nhap sai roi vui long nhap lai!");
