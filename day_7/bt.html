@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> object</title>
+</head>
+<body>
+    <h1> hello dong </h1>
+    <script>
+        let myObject = {};
+        while (true) {
+            let operation = prompt("Ban vui long chon (C ,R ,U , D ,Exit) :");
+            if(operation==="C"){
+                myObject.name = prompt("Ban vui long nhap hoc sinh moi :");
+                myObject.mssv=prompt("Ban vui long nhap ma so sinh vien :"); 
+                myObject.lop=prompt("Ban vui long nhap lop moi :");
+                myObject.school=prompt("Ban vui long nhap truong :");
+                myObject.email=prompt("Ban vui long nhap email :");
+            }else if(operation==="R"){
+                console.log(myObject);
+                let prinName=prompt("Ban co muon in ra thuoc tinh nao khong (Y=co)");
+                if(prinName==="Y"){
+                    let myProperty1=prompt("Ban muon in ra thuoc tinh nao?");
+                    if(myProperty1==="name"){
+                        console.log(myObject.name);
+                    }else if(myProperty1==="mssv"){
+                        console.log(myObject.mssv);
+                    }else if(myProperty1==="lop"){
+                        console.log(myObject.lop);
+                    }else if(myProperty1==="school"){
+                        console.log(myObject.truong);
+                    }else if(myProperty1==="email"){
+                        console.log(myObject.email);
+                    }else{
+                        console.log("Khong co thong tin nay,vui long nhap lai!");
+                    }
+                }else{}
+            }else if(operation==="U"){
+                let updateStudent=prompt("Ban co muon update thong tin sinh vien khong (Y=co):");
+                if(updateStudent==="Y"){
+                    let myProperty2=prompt("Ban muon thay doi thong tin nao?");
+                    let newChange =prompt("Ban hay nhap vao thay doi moi");
+                    myObject[myProperty2]=newChange;
+                }
+            }else if(operation==="D"){
+                let deleteOfObject=prompt("Ban co muon xoa thuoc tinh nao khong (Y=co)?");
+                if(deleteOfObject==="Y"){
+                    let myProperty3=prompt("Ban muon xoa thuoc tinh nao?");
+                    delete myObject[myProperty3];
+                }else{}
+            }else if(operation==="Exit"){
+                break;
+            }else{
+                console.log("Ban nhap sai roi vui long nhap lai!");
+            }
+            
+        }
+    </script>
+</body>
+</html>
