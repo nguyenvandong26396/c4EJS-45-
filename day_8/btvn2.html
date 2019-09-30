@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> function</title>
+</head>
+<body>
+    <h1> hello dong </h1>
+    <script>
+      function palindrome(str) {
+            for ( let i = 0; i < str.length; i++ ) {
+                if ( str[i] !== str[str.length-i- 1] ) {
+                    console.log(`${str} is not a palindrome string!`);
+                } else {
+                    console.log(`${str} is a palindrome string!`);
+                }
+            }
+        };
+        palindrome(prompt("Nhap tring:"));
+    </script>
+</body>
+</html>

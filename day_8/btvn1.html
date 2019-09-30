@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title> function</title>
+</head>
+<body>
+    <h1> hello dong </h1>
+    <script>
+        // ham tim so lon thu 2
+       function secondMax (arr){
+           let max=Math.max.apply(null,arr);
+           arr.splice(arr.indexOf(max),1);
+           return Math.max.apply(null,arr);
+       }
+        // ham sap xep theo thu tu tang dan
+       function sapXep(a,b){
+           return a-b 
+       }
+       // Lay thong tin tu nguoi dung 
+       let arr=[];
+       let index=Number(prompt("Ban vui long nhap so phan tu cua mang?"));
+       for(let i=1;i<=index;i++){
+           let phanTu=Number(prompt(`Ban hay nhap phan tu thu ${i}`));
+           arr.push(phanTu);
+       }
+       // Goi ham va in ra
+       console.log(`Phan tu sap xep theo thu tu tang dan la : ${arr.sort(sapXep)}`);
+       let max2=secondMax(arr);
+       console.log(`Phan tu lon thu 2 trong mang la : ${max2}`);
+    </script>
+</body>
+</html>
