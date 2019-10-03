@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="beginning">Class Students</h1> 
+   <div id="content">
+       <ul id="class">
+       </ul>
+   </div>
+ <script>
+     //Create
+     document.getElementById("class").innerHTML+='<li id="1">Nguyen Hai Duong</li>'
+     document.getElementById("class").innerHTML+='<li id="2">Le Van Luyen</li>'
+     document.getElementById("class").innerHTML+='<li id="3">Nguyen Van Dong</li>'
+     //upDate
+     document.getElementById("3").innerHTML='nguyen van a'
+     document.getElementById("1").innerHTML='nguyen van b'
+     //Delete
+     document.getElementsByTagName("li")[1].remove();
+     
+ </script>
+</body>
+</html>
